@@ -24,7 +24,7 @@ public class DepartmentRestController {
         return repo.findAll();
     }
     @GetMapping("/departments/new")
-    public Department showDepartment(@PathVariable("name") String name){
+    public Department newDepartment(@PathVariable("name") String name){
 
         return new Department(name);
     }
