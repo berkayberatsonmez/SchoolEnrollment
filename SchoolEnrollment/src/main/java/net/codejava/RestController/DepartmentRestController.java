@@ -23,12 +23,7 @@ public class DepartmentRestController {
 
         return repo.findAll();
     }
-    @GetMapping("/departments/new")
-    public Department newDepartment(@PathVariable("name") String name){
-
-        return new Department(name);
-    }
-
+   
     @PostMapping("/departments/save")
     public Department saveDepartment(@RequestBody Department department){
 
