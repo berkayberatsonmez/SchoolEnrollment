@@ -63,12 +63,12 @@ public class StudentRestController {
         return  studentRepo.save(updateStudent);
     }
 
-    @DeleteMapping("students/delete/{id}")
-    public Student deleteStudent(@PathVariable("id") Integer id){
+  @DeleteMapping("students/delete/{id}")
+    public List<Student> deleteStudent(@PathVariable("id") Integer id){
         Student student = studentRepo.findById(id).orElseThrow(() -> new ResourceNotFoundException("Student not found" + id));
 
         studentRepo.delete(student);
-        return new Student();
+        return studentRepo.findAll();
     }
 
 }
