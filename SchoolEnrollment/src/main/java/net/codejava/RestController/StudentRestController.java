@@ -26,12 +26,6 @@ public class StudentRestController {
     @Autowired
     private DepartmentRepository departmentRepo;
 
-    @GetMapping("/students/new")
-    public Student showNewStudent(){
-
-        return new Student();
-    }
-
     @PostMapping("/students/save")
     public Student saveStudent(@RequestBody Student student){
 
