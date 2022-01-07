@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Inventory Homepage</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+</head>
+<body>
+<div class="container text-center">
+    <div><h1>Welcome to School Enrollment</h1></div>
+    <div class="p-2">
+        <a class="h2" th:href="@{/departments}">List Departments</a>
+    </div>
+    <div class="p-2">
+        <a class="h2" th:href="@{/departments/new}">Create Department</a>
+    </div>
+    <div class="p-2">
+        <a class="h2" th:href="@{/students}">List Student</a>
+    </div>
+    <div class="p-2">
+        <a class="h2" th:href="@{/students/new}">Create Student</a>
+    </div>
+</div>
+</body>
+</html>
